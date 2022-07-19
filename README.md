@@ -3,10 +3,10 @@ can you tell if you are over or underweight?
 
 ## About this project:
 <div id="header" align="center">
-  <img src="https://media.giphy.com/media/l1J9qujkLCEVPR8is/giphy.gif" width="500"/>
+  <img src="https://media.giphy.com/media/3o6MbkSg5gfrwB33XO/giphy.gif" width="500"/>
 </div>
 
-
+ 
 ## Approach
 1. 
 2.
