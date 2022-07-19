@@ -2,8 +2,10 @@
 can you tell if you are over or underweight?
 
 ## About this project:
-  
-![alt](https://media.giphy.com/media/l1J9qujkLCEVPR8is/giphy.gif)
+<div id="header" align="center">
+  <img src="https://media.giphy.com/media/l1J9qujkLCEVPR8is/giphy.gif" width="500"/>
+</div>
+
 
 ## Approach
 1. 
@@ -36,7 +38,9 @@ can you tell if you are over or underweight?
 ## **Visualizations & Analysis:**
 
 ## **Observations:**
-! [Alt Text](https://media.giphy.com/media/3ohzdJ7FOY1sct67WU/giphy.gif)
+<div id="header" align="center">
+  <img src="https://media.giphy.com/media/3ohzdJ7FOY1sct67WU/giphy.gif" width="300"/>
+</div>
 
 ## **Website Design:**
 This application includes 3 responsive webpages with dynamic navigation built using HTML, CSS, and using bootstrap .
