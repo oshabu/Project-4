@@ -1,8 +1,10 @@
 # Project-4
 
 ## About this project:
-
-
+  
+<p align="center">
+  <img src="[demo.gif](https://giphy.com/embed/l1J9qujkLCEVPR8is)" alt="animated" />
+</p>
 
 ## Approach
 1. 
@@ -35,7 +37,7 @@
 ## **Visualizations & Analysis:**
 
 ## **Observations:**
-
+! [Alt Text](https://media.giphy.com/media/3ohzdJ7FOY1sct67WU/giphy.gif)
 
 ## **Website Design:**
 This application includes 3 responsive webpages with dynamic navigation built using HTML, CSS, and using bootstrap .
