@@ -45,7 +45,7 @@ Authors:
 
 Ash Tao - https://github.com/Ash-Tao
 
-Christian Adiputra - 
+Christian Adiputra - https://github.com/cadiputra
 
 Dhiren Patel - https://github.com/DhirenkumarP
 
