@@ -1,10 +1,9 @@
-# Project-4
+# Human Vs Machine
+can you tell if you are over or underweight?
 
 ## About this project:
   
-<p align="center">
-  <img src="[demo.gif](https://giphy.com/embed/l1J9qujkLCEVPR8is)" alt="animated" />
-</p>
+![alt](https://media.giphy.com/media/l1J9qujkLCEVPR8is/giphy.gif)
 
 ## Approach
 1. 
