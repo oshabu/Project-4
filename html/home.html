@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Over or Underweight?</title>
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <!-- Font Awesome icons (free version)-->
+  <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet" />
+  <!-- Core theme CSS (includes Bootstrap)-->
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container px-4 px-lg-5">
+      <a class="navbar-brand" href="#page-top">Back to top</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+        aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i> -->
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#try">Try it out</a></li>
+          <li class="nav-item"><a class="nav-link" href="#dashboard">Our Dashboard</a></li>
+          <li class="nav-item"><a class="nav-link" href="#find">Our Data</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- TopPage-->
+  <header class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+      <div class="d-flex justify-content-center">
+        <div class="text-center">
+          <h1 class="mx-auto text-uppercase"></h1>
+          <h2 class="text-white-50 mx-auto mt-2 mb-5" style="line-height:1.5"> Let's see if we can guess if you are over
+            or underweight?<br>
+          </h2>
+          <a class="btn btn-primary" href="#try"> Try it yourself</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- try = Our try it Out Section-->
+  <section class="try-section text-center" id="try">
+    <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="text-white mb-4">Answer All Questions Below</h2>
+          <h5 class="text-white-50 mx-auto mt-2 mb-5" style="line-height:1.5">Supposedly our accuracy is 94%...<br>
+            Would we be able to accurately predict if you are over or underweight?<br>
+          </h5>
+        </div>
+      </div>
+      <img class="img-fluid"
+        src="https://64.media.tumblr.com/4fe22c57243d023af611a2e8e8ab632d/184c9f4b2b6046b8-15/s500x750/6557e424532692624b0347a044330c0895179015.gifv"
+        alt="..." />
+    </div>
+    <br>
+
+    <!---User Input Form-->
+    <div class="panel-body ">
+      <form>
+        <div class="form-group">
+          <ul class="list-group" id="filters">
+            <li class="filter list-group-item">
+
+              <label for="date">What is your gender</label>
+              <div class="card" style="background-color:rgb(242, 241, 241);">
+                <select id="selDate">
+                  <option>Female</option>
+                  <option>Male</option>
+                </select>
+              </div>
+
+              <label for="date">Do you have a family history with overweigh</label>
+              <div class="card" style="background-color:rgb(242, 241, 241);">
+                <select id="selCity">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </div>
+
+              <label for="date">Do you eat high calorie food frequently</label>
+              <div class="card" style="background-color:rgb(242, 241, 241);">
+                <select id="selState">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </div>
+
+              <label for="date">Do you eat any food between meals</label>
+              <div class="card" style="background-color:rgb(242, 241, 241);">
+                <select id="selCountry">
+                  <option>Sometimes</option>
+                  <option>Frequently</option>
+                  <option>Always</option>
+                  <option>No</option>
+                </select>
+              </div>
+
+              <label for="date">Do you smoke</label>
+              <div class="card" style="background-color:rgb(242, 241, 241);">
+                <select id="selCountry">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </div>
+
+              <label for="date">Do you monitor the calories you eat daily</label>
+              <div class="card" style="background-color:rgb(242, 241, 241);">
+                <select id="selCountry">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </div>
+
+              <label for="date">How often do you drink alcohol</label>
+              <div class="card" style="background-color:rgb(242, 241, 241);">
+                <select id="selCountry">
+                  <option>Sometimes</option>
+                  <option>Frequently</option>
+                  <option>Always</option>
+                  <option>No</option>
+                </select>
+              </div>
+
+              <label for="date">Which transport do you usually use</label>
+              <div class="card" style="background-color:rgb(242, 241, 241);">
+                <select id="selCountry">
+                  <option>Public_Transportation</option>
+                  <option>Walking</option>
+                  <option>Automobile</option>
+                  <option>Motorbike</option>
+                  <option>Bike</option>
+                </select>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <br>
+        <button id="filter-btn-2" type="button" class="btn btn-primary">Let's find out</button>
+      </form>
+    </div>
+  </section>
+  <!-- Projects-->
+  <section class="dashboard-section bg-light" id="dashboard">
+    <div class="container px-4 px-lg-5">
+
+      <!-- Featured Project Row-->
+      <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+        <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/Brain.jpg" alt="..." /></div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-lg-left">
+            <h4 class="text-center">Outcome</h4>
+            <p class="text-black-50 mb-0">ABCD</p>
+            <br>
+            <p class="text-black-50 mb-0" style="font-size:80%;font-style: italic;">“The first thing you lose on a diet
+              is brain mass.
+              ”</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
