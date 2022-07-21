@@ -16,33 +16,34 @@ filename = 'finalized_model.sav'
 filename_le = 'label_encoder.sav'
 filename_minmax ='min_max_scalar.sav'
 
-def calculate_bmi(gender,height,weight):
-    labelEncoderFile = pickle.load(open(filename_le, 'rb'))
-    gender = labelEncoderFile.transform([[gender]]) 
-    gender = gender[0]
+def calculate_bmi(Height,Weight,Age,Gender,family_history_with_overweight,FAVC,CAEC,SMOKE,
+         SCC,CALC,MTRANS):
+    
+    column_names = ['Gender','family_history_with_overweight','FAVC','CAEC','SMOKE','SCC','CALC','MTRANS']
+    dict_all_loaded = pickle.load(file)
+    file.close()
 
+    df = pd.DataFrame(columns=column_names)
+    df.loc[0] = [Gender,family_history_with_overweight,FAVC,CAEC,SMOKE,SCC,CALC,MTRANS]
+
+    for col in df.columns:
+        df.replace(dict_all_loaded[col], inplace=True)
+
+    
     MinMaxScalerFile = pickle.load(open(filename_minmax, 'rb'))
-    height_weight = MinMaxScalerFile.transform([[height,weight]]) 
-    height = height_weight[0][0]
-    weight = height_weight[0][1]
+    height_weight = MinMaxScalerFile.transform([[Height,Weight,Age]]) 
+    Height = height_weight[0][0]
+    Weight = height_weight[0][1]
+    Age = height_weight[0][2]
 
     loaded_model = pickle.load(open(filename, 'rb'))
-    result = loaded_model.predict([[gender,height,weight]])
+    result = loaded_model.predict([[Gender,family_history_with_overweight,FAVC,CAEC,SMOKE,SCC,CALC,MTRANS,Height,Weight,Age]])
 
     return result[0]
 
 
-@app.route("/")
+@app.route("/",methods=['GET', 'POST'])
 def home():
-    return render_template('home.html')
-
-@app.route("/dashboards")
-def visuals():
-    return render_template('dashboards.html')
-
-@app.route("/machinelearning", methods=['GET', 'POST'])
-def streambyte():
-    # your file processing code is here...
     if request.method=='POST':
         gender = request.form['gender']
         height = request.form['height']
@@ -50,12 +51,12 @@ def streambyte():
         
         bmi = calculate_bmi(gender,height,weight)
 
-        return render_template('machinelearning.html',  result = bmi)
+        return render_template('home.html',  result = bmi)
     
     else:
-        return render_template('machinelearning.html')
-
-
+        return render_template('home.html')
+    
+ 
 if __name__ == '__main__':
    app.run(debug = True)
 
