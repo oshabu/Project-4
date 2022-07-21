@@ -17,9 +17,9 @@ filename_le = 'label_encoder.sav'
 filename_minmax ='min_max_scalar.sav'
 
 def calculate_bmi(Height,Weight,Age,Gender,family_history_with_overweight,FAVC,CAEC,SMOKE,
-         SCC,CALC,MTRANS):
+         SCC,CALC,MTRANS,Height,Weight,Age):
     
-    column_names = ['Gender','family_history_with_overweight','FAVC','CAEC','SMOKE','SCC','CALC','MTRANS']
+    column_names = ['Gender','family_history_with_overweight','FAVC','CAEC','SMOKE','SCC','CALC','MTRANS','Height','Weight','Age']
     dict_all_loaded = pickle.load(file)
     file.close()
 
