@@ -16,10 +16,10 @@ filename = 'finalized_model.sav'
 filename_le = 'label_encoder.sav'
 filename_minmax ='min_max_scalar.sav'
 
-def calculate_bmi(Height,Weight,Age,Gender,family_history_with_overweight,FAVC,CAEC,SMOKE,
-         SCC,CALC,MTRANS,Height,Weight,Age):
+def calculate_bmi(Gender,family_history_with_overweight,FAVC,CAEC,SMOKE,
+         SCC,CALC,MTRANS):
     
-    column_names = ['Gender','family_history_with_overweight','FAVC','CAEC','SMOKE','SCC','CALC','MTRANS','Height','Weight','Age']
+    column_names = ['Gender','family_history_with_overweight','FAVC','CAEC','SMOKE','SCC','CALC','MTRANS']
     dict_all_loaded = pickle.load(file)
     file.close()
 
@@ -29,15 +29,15 @@ def calculate_bmi(Height,Weight,Age,Gender,family_history_with_overweight,FAVC,C
     for col in df.columns:
         df.replace(dict_all_loaded[col], inplace=True)
 
-    
-    MinMaxScalerFile = pickle.load(open(filename_minmax, 'rb'))
-    height_weight = MinMaxScalerFile.transform([[Height,Weight,Age]]) 
-    Height = height_weight[0][0]
-    Weight = height_weight[0][1]
-    Age = height_weight[0][2]
+    # ---> CA 22/07: Unsure if we need the MinMaxScaler as we don't use Height, Weight, Age features in our ML
+    # MinMaxScalerFile = pickle.load(open(filename_minmax, 'rb'))
+    # height_weight = MinMaxScalerFile.transform([[Height,Weight,Age]]) 
+    # Height = height_weight[0][0]
+    # Weight = height_weight[0][1]
+    # Age = height_weight[0][2]
 
     loaded_model = pickle.load(open(filename, 'rb'))
-    result = loaded_model.predict([[Gender,family_history_with_overweight,FAVC,CAEC,SMOKE,SCC,CALC,MTRANS,Height,Weight,Age]])
+    result = loaded_model.predict([[Gender,family_history_with_overweight,FAVC,CAEC,SMOKE,SCC,CALC,MTRANS]])
 
     return result[0]
 
@@ -45,11 +45,16 @@ def calculate_bmi(Height,Weight,Age,Gender,family_history_with_overweight,FAVC,C
 @app.route("/",methods=['GET', 'POST'])
 def home():
     if request.method=='POST':
-        gender = request.form['gender']
-        height = request.form['height']
-        weight = request.form['weight']
+        gender = request.form['Gender']
+        history = request.form['family_history_with_overweight']
+        caloric_food = request.form['FAVC']
+        between_meals = request.form['CAEC']
+        smoker = request.form['SMOKE']
+        calories_monitor = request.form['SCC']
+        alcohol = request.form['CALC']
+        transport = request.form['MTRANS']
         
-        bmi = calculate_bmi(gender,height,weight)
+        bmi = calculate_bmi(gender,history,caloric_food,between_meals,smoker,calories_monitor,alcohol,transport)
 
         return render_template('home.html',  result = bmi)
     
