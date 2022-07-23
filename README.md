@@ -63,9 +63,11 @@ Questionaire:
 - Restricted timeframe to complete project 4
 
 ## **Visualizations & Analysis:**
+![CHART1](image/tableau3.png)
+![CHART2](image/tableau4.png)
 ![CHART1](image/tableau1.png)
 ![CHART2](image/tableau2.png)
-
+![CHART2](image/tableau5.png)
 ## **Observations:**
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/3ohzdJ7FOY1sct67WU/giphy.gif" width="300"/>
