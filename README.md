@@ -4,6 +4,7 @@ can you tell if you are over or underweight?
 ## About this project:
 We often think that obesity cause by overeating, however that's not only the case. Nowadays, obesity has become a significant threat for all people from every age, worldwide. Unhealthy lifestyle, eating excessive junk food, late-night sleep, spend a long time sitting down are several factors that contribute to obesity.. "so, if I'm overweight do I mean i am also Obese? what is the difference between overweight and obese?"
 Overweight is when the BMI greater than or equal to 25; and how we measure if we are obese is when the BMI (Body Mass Index) is greater than or equal to 30. If you are overweight, potentially you will become obese if precautions being ignored. 
+If the current trend continues, the overweight and obese population is likely to increase to 41% by 2030. Individuals developing signs of weight gain or obesity are also at a risk of developing serious illnesses such as type 2 diabetes, respiratory problems, heart disease and stroke. Some intervention measures such as physical activity and healthy eating can be a fundamental component to maintain a healthy lifestyle. Therefore, it is absolutely essential to detect obesity as early as possible.
 
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/3o6MbkSg5gfrwB33XO/giphy.gif" width="500"/>
@@ -83,6 +84,7 @@ Questionaire:
 ![CHART2](image/tableau2.png)
 ![CHART2](image/tableau5.png)
 ## **Observations:**
+Obesity in general is a global concern. Many studies have previously done and publish in general for statistical methods to predict the probabilities of children growing into adults as obese. 
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/3ohzdJ7FOY1sct67WU/giphy.gif" width="300"/>
 </div>
