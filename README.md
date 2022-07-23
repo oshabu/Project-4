@@ -2,16 +2,23 @@
 can you tell if you are over or underweight?
 
 ## About this project:
+We often think that obesity cause by overeating, however that's not only the case. Nowadays, obesity has become a significant threat for all people from every age, worldwide. Unhealthy lifestyle, eating excessive junk food, late-night sleep, spend a long time sitting down is several factors that contribute to obesity.. "so, if I'm overweight do I mean i am also Obese? what is the difference between overweight and obese?"
+Overweight is when the BMI greater than or equal to 25; and how we measure if we are obese is when the BMI (Body Mass Index) is greater than or equal to 30. If you are overweight, potentially you will become obese if precautions being ignored. 
+
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/3o6MbkSg5gfrwB33XO/giphy.gif" width="500"/>
 </div>
 
  
 ## Approach
-1. 
-2.
-3.
-4.
+1. Identify data sources and dependencies
+2. Collect and clean trajectory data
+3. Applying Machine Learning algorithms
+4. Load data in MongoDB
+5. Create Flask App and connect routes to MongoDB local host
+6. Create charts and map using Javascript libraries
+7. Customise html for final application
+8. Visualise dashboard locally or in Heroku
 
 ## **Architectural Diagram:**
 
@@ -30,7 +37,7 @@ can you tell if you are over or underweight?
 
 
 ## **IDE:**
-
+![Visual Studio Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 
 ## **Limitations, Assumptions & Challenges:**
 - 
