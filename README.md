@@ -25,22 +25,22 @@ Overweight is when the BMI greater than or equal to 25; and how we measure if we
 ## **Data Sources:**
 Data is derived from the Kaggle dataset in order to illustrate the relationship between questionaire surveyed approximately 2000 participant. 
 Questionaire: 
-What is your gender? (Gender) = Female, Male						
-what is your age? (Age) = Numeric value						
-What is your height? (Height) = Numeric value in meters						
-What is your weight? (Weight) = Numeric value in Kilograms						
-Has a family member suffered or suffers from overweight? = Yes, No						
-Do you eat high caloric food frequenlty? (FAVC) = Yes, No						
-Do you usually eat vegatables in your meals? (FCVC) = 1-3 follow by usually meal						
-How many main means do you have daily? (NCP) = Between 1 y 2, 3, more than 4						
-Do you eat any food between mean? (CAEC) = No, Sometimes, Frequently, Always						
-Do you smoke? (Smoke) = Yes, No						
-How much water do you drink daily? (CH20) = less than a liter, between 1 and 2L, more than 2 L						
-Do you monitor the calories you eat daily? (SCC) = Yes, No						
-How often do you have physical activity? (FAF) = I do not have, 1 or 2 days, 2 or 4 days, 4 or 5 day						
-How much time do you use technological devices? (TUE) = 0-2 hours, 3-5 hours, more than 5 hours						
-How often do you drink alcohol? (CALC) =I don’t drink, Sometimes, Frequently, Always						
-Which transportation do you usually use? (MTRANS) = Automobile, Motorbike, Bike Public Transportation, Walking						
+1. What is your gender? (Gender) = Female, Male						
+2. what is your age? (Age) = Numeric value						
+3. What is your height? (Height) = Numeric value in meters						
+4. What is your weight? (Weight) = Numeric value in Kilograms						
+5. Has a family member suffered or suffers from overweight? = Yes, No						
+6. Do you eat high caloric food frequenlty? (FAVC) = Yes, No						
+7. Do you usually eat vegatables in your meals? (FCVC) = 1-3 follow by usually meal						
+8. How many main means do you have daily? (NCP) = Between 1 y 2, 3, more than 4						
+9. Do you eat any food between mean? (CAEC) = No, Sometimes, Frequently, Always						
+10. Do you smoke? (Smoke) = Yes, No						
+11. How much water do you drink daily? (CH20) = less than a liter, between 1 and 2L, more than 2 L						
+12. Do you monitor the calories you eat daily? (SCC) = Yes, No						
+13. How often do you have physical activity? (FAF) = I do not have, 1 or 2 days, 2 or 4 days, 4 or 5 day						
+14. How much time do you use technological devices? (TUE) = 0-2 hours, 3-5 hours, more than 5 hours						
+15. How often do you drink alcohol? (CALC) =I don’t drink, Sometimes, Frequently, Always						
+16. Which transportation do you usually use? (MTRANS) = Automobile, Motorbike, Bike Public Transportation, Walking						
 
 
 ## **Coding Languages:**
