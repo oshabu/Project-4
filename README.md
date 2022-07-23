@@ -25,6 +25,9 @@ Overweight is when the BMI greater than or equal to 25; and how we measure if we
 
 ## **Data Sources:**
 Data is derived from the Kaggle dataset in order to illustrate the relationship between questionaire surveyed approximately 2000 participant. 
+
+![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)
+
 Questionaire: 
 1. What is your gender? (Gender) = Female, Male						
 2. what is your age? (Age) = Numeric value						
@@ -41,23 +44,33 @@ Questionaire:
 13. How often do you have physical activity? (FAF) = I do not have, 1 or 2 days, 2 or 4 days, 4 or 5 day						
 14. How much time do you use technological devices? (TUE) = 0-2 hours, 3-5 hours, more than 5 hours						
 15. How often do you drink alcohol? (CALC) =I don’t drink, Sometimes, Frequently, Always						
-16. Which transportation do you usually use? (MTRANS) = Automobile, Motorbike, Bike Public Transportation, Walking						
+16. Which transportation do you usually use? (MTRANS) = Automobile, Motorbike, Bike Public Transportation, Walking					
+
+![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)
 
 
 ## **Coding Languages:**
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
-## **Data Bases:**
+## ** Machine Learning Libraries: **
+![scikit-learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white)
+![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
 
+## **Presentation:**
+![Microsoft PowerPoint](https://img.shields.io/badge/Microsoft_PowerPoint-B7472A?style=for-the-badge&logo=microsoft-powerpoint&logoColor=white)
 
 ## **Platform:**
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 ## **IDE:**
 ![Visual Studio Code](https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
+![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white)
 
 ## **Limitations, Assumptions & Challenges:**
 - 
