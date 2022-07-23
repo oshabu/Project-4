@@ -21,6 +21,8 @@ Overweight is when the BMI greater than or equal to 25; and how we measure if we
 8. Visualise dashboard locally
 
 ## **Architectural Diagram:**
+data collection and pre-processing
+![CHART1](image/DATA PROCESSING.PNG)
 
 ## **Data Sources:**
 Data is derived from the Kaggle dataset in order to illustrate the relationship between questionaire surveyed approximately 2000 participant. 
