@@ -28,7 +28,7 @@ If the current trend continues, the overweight and obese population is likely to
 Data is derived from the Kaggle dataset in order to illustrate the relationship between questionaire surveyed approximately 2000 participant. 
 - [Estimate obseity level classification](https://www.kaggle.com/code/kaitod14/starter-estimate-obseity-level-classification/data?select=ObesityDataSet_raw_and_data_sinthetic.csv)
 
-![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)
+
 
 Questionaire: 
 1. What is your gender? (Gender) = Female, Male						
@@ -46,8 +46,10 @@ Questionaire:
 13. How often do you have physical activity? (FAF) = I do not have, 1 or 2 days, 2 or 4 days, 4 or 5 day						
 14. How much time do you use technological devices? (TUE) = 0-2 hours, 3-5 hours, more than 5 hours						
 15. How often do you drink alcohol? (CALC) =I don’t drink, Sometimes, Frequently, Always						
-16. Which transportation do you usually use? (MTRANS) = Automobile, Motorbike, Bike Public Transportation, Walking					
+16. Which transportation do you usually use? (MTRANS) = Automobile, Motorbike, Bike Public Transportation, Walking
 
+
+![Kaggle](https://img.shields.io/badge/Kaggle-035a7d?style=for-the-badge&logo=kaggle&logoColor=white)
 ![Stack Overflow](https://img.shields.io/badge/-Stackoverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)
 
 
