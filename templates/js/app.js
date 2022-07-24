@@ -1,7 +1,7 @@
 var vizList = [
-  "https://public.tableau.com/views/ProjectFinal_16582322310950/Dashboard2?:language=en-GB&publish=yes&:display_count=n&:origin=viz_share_link",
-  "https://public.tableau.com/views/ProjectFinal2_16583244440630/Uncontinuous?:language=en-GB&publish=yes&:display_count=n&:origin=viz_share_link",
   "https://public.tableau.com/views/OverorUnderweightData/Sheet6?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
+  "https://public.tableau.com/views/ProjectFinal-ContinuousFeature/Uncontinuous?:language=en-GB&publish=yes&:display_count=n&:origin=viz_share_link",
+  "https://public.tableau.com/views/ProjectFinal-ContinuousFeature/ContinuousFeature?:language=en-GB&publish=yes&:display_count=n&:origin=viz_share_link",
 ];
 var viz,
   vizLen = vizList.length,

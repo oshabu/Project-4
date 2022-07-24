@@ -1,5 +1,6 @@
+import joblib
+import numpy as np
 from flask import Flask, render_template, request
-import pandas as pd
 from sklearn.linear_model import LinearRegression
 import os
 import pandas as pd
@@ -8,55 +9,67 @@ from sklearn import preprocessing
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 import pickle
 
+from sklearn.preprocessing import LabelEncoder
 
-app = Flask(__name__)
+
+
 app = Flask(__name__, static_folder="templates")
 
 filename = 'finalized_model.sav'
-filename_le = 'label_encoder.sav'
-filename_minmax ='min_max_scalar.sav'
-
-def calculate_bmi(Gender,family_history_with_overweight,FAVC,CAEC,SMOKE,
-         SCC,CALC,MTRANS):
-    
-    column_names = ['Gender','family_history_with_overweight','FAVC','CAEC','SMOKE','SCC','CALC','MTRANS']
-    dict_all_loaded = pickle.load(file)
-    file.close()
-
-    df = pd.DataFrame(columns=column_names)
-    df.loc[0] = [Gender,family_history_with_overweight,FAVC,CAEC,SMOKE,SCC,CALC,MTRANS]
-
-    for col in df.columns:
-        df.replace(dict_all_loaded[col], inplace=True)
-
-    # ---> CA 22/07: Unsure if we need the MinMaxScaler as we don't use Height, Weight, Age features in our ML
-    # MinMaxScalerFile = pickle.load(open(filename_minmax, 'rb'))
-    # height_weight = MinMaxScalerFile.transform([[Height,Weight,Age]]) 
-    # Height = height_weight[0][0]
-    # Weight = height_weight[0][1]
-    # Age = height_weight[0][2]
-
-    loaded_model = pickle.load(open(filename, 'rb'))
-    result = loaded_model.predict([[Gender,family_history_with_overweight,FAVC,CAEC,SMOKE,SCC,CALC,MTRANS]])
-
-    return result[0]
-
-
+le = LabelEncoder()
+#data = pd.read_csv('ObesityDataSet_raw_and_data_sinthetic.csv')#读取数据
+#data['NObeyesdad'] = le.fit_transform(data['NObeyesdad'])
+filename1 = 'min_max_scalar.sav'
+filename2 = 'label_encoder.sav'
+scaler = preprocessing.MinMaxScaler()
 @app.route("/",methods=['GET', 'POST'])
 def home():
     if request.method=='POST':
-        gender = request.form['Gender']
-        history = request.form['family_history_with_overweight']
-        caloric_food = request.form['FAVC']
-        between_meals = request.form['CAEC']
-        smoker = request.form['SMOKE']
-        calories_monitor = request.form['SCC']
-        alcohol = request.form['CALC']
-        transport = request.form['MTRANS']
-        
-        bmi = calculate_bmi(gender,history,caloric_food,between_meals,smoker,calories_monitor,alcohol,transport)
+        height = request.form.get('height')
+        weight = request.form.get('weight')
+        age = request.form.get('age')
+        gender = request.form.get('gender')
+        selCity= request.form.get('selCity')
+        calorie = request.form.get('eat')
+        meals = request.form.get('meals')
+        smoke = request.form.get('smoke')
+        calories = request.form.get('calories')
+        alcohol = request.form.get('alcohol')
+        transport = request.form.get('transport')
+        MinMaxScalerFile = pickle.load(open(filename1, 'rb'))
+        test = MinMaxScalerFile.transform([[height, weight, age]])
+        list_2 = [float(x) for item in test for x in item]
+        height = list_2[0]
+        weight = list_2[1]
+        age = list_2[2]
+        row = [gender,age,height,weight,selCity, calorie, meals, smoke, calories, alcohol, transport]
+        ls = np.array(row, dtype=np.float64)
+        load_model = pickle.load(open(filename, 'rb'))
+        load_model1 = pickle.load(open(filename2,'rb'))
+        result = load_model.predict([ls])
+        bmi1 = load_model1.inverse_transform([result][0])
+        #bmi1 = le.inverse_transform([(result[0].astype(int))])
+        bmi =''.join(str(i) for i in bmi1)
 
-        return render_template('home.html',  result = bmi)
+        if((result[0].astype(int)) ==0):
+            detail = 'Insufficient_Weight'
+        if((result[0].astype(int)) ==1):
+            detail = 'Normal_Weight'
+        if ((result[0].astype(int)) == 2):
+            detail = 'Obesity_Type_I'
+        if ((result[0].astype(int)) == 3):
+            detail = 'Obesity_Type_II'
+        if ((result[0].astype(int)) == 4):
+            detail = 'Obesity_Type_III'
+        if ((result[0].astype(int)) == 5):
+            detail = 'Overweight_Level_I'
+        if ((result[0].astype(int)) == 6):
+            detail = 'Overweight_Level_II'
+
+
+
+        return render_template('home.html',  health = bmi,detail = detail)
+
     
     else:
         return render_template('home.html')

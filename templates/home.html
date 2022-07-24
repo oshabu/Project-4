@@ -18,6 +18,7 @@
   <!-- Core theme CSS (includes Bootstrap)-->
   <!-- <link href="css/styles.css" rel="stylesheet" /> -->
   <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/styles.css') }}">
+  <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
 
 
 </head>
@@ -25,20 +26,20 @@
 <body id="page-top">
 
   <!-- Navigation-->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top text-primary" id="mainNav">
     <div class="container px-4 px-lg-5">
-      <a class="navbar-brand" href="#page-top">Back to top</a>
+      <a class="navbar-brand text-primary" href="#page-top">Back to top</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
         aria-label="Toggle navigation">
-        Menu
+        <!-- Menu
         <i class="fas fa-bars"></i> -->
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#try">Try it out</a></li>
-          <li class="nav-item"><a class="nav-link" href="#dashboard">Our Dashboard</a></li>
-          <li class="nav-item"><a class="nav-link" href="#find">Machinelearning</a></li>
+      <div class="collapse navbar-collapse " id="navbarResponsive">
+        <ul class="navbar-nav ms-auto ">
+          <li class="nav-item "><a class="nav-link" href="#try">Try it out</a></li>
+          <li class="nav-item "><a class="nav-link" href="#dashboard">Our Dashboard</a></li>
+          <li class="nav-item "><a class="nav-link" href="#find">Machinelearning</a></li>
         </ul>
       </div>
     </div>
@@ -59,9 +60,10 @@
     </div>
   </header>
 
+
   <!-- try = Our try it Out Section-->
-  <section class="try-section text-center" id="try">
-    <div class="container px-4 px-lg-5">
+  <section class="try-section " id="try">
+    <div class="container px-4 px-lg-5 text-center">
       <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-lg-8">
           <h2 class="text-white mb-4">Answer All Questions Below</h2>
@@ -75,97 +77,122 @@
         alt="..." />
     </div>
     <br>
+    <br>
 
     <!---User Input Form-->
     <div class="panel-body ">
-      <form>
-        <div class="form-group">
-          <ul class="list-group" id="filters">
-            <li class="filter list-group-item">
+      <form action="#result" method="post">
+        <div class="card text-light" style="background-color: rgba(245, 245, 245, 0.0);">
+          <div class="row">
+            <div class="form-group col-lg-3 col-md-6 p-4">
+              <ul class="list-group" id="filters">
+                <!-- <li class="filter list-group-item "> -->
+                <label for=" height" type="text">what is your height</label>
+                <input id="height" type="text" name="height" placeholder="in KGs. e.g. 60">
+                <label for="weight">what is your weight</label>
+                <!-- <div class="card "> -->
+                <input id="weight" type="text" name="weight" placeholder="in Ms. e.g. 1.65">
+                <!-- </div> -->
+                <label for="age">how old are you</label>
+                <!-- <div class="card " style="background-color:rgb(242, 241, 241);"> -->
+                <input id="age" type="text" name="age" placeholder="e.g. 36">
+                <!-- </div> -->
 
-              <label for="date">What is your gender</label>
-              <div class="card" style="background-color:rgb(242, 241, 241);">
-                <select id="gender">
-                  <option>Female</option>
-                  <option>Male</option>
+                <label for="gender">What is your gender</label>
+                <!-- <div class="card" style="background-color:rgb(242, 241, 241);"> -->
+                <select id="gender" name="gender">
+                  <option value="0">Female</option>
+                  <option value="1">Male</option>
                 </select>
-              </div>
+                <!-- </div> -->
 
-              <label for="date">Do you have a family history with overweigh</label>
-              <div class="card" style="background-color:rgb(242, 241, 241);">
-                <select id="history">
-                  <option>Yes</option>
-                  <option>No</option>
+                <!-- </li> -->
+              </ul>
+            </div>
+            <div class="form-group col-lg-5 col-md-6 p-4">
+              <ul class="list-group" id="filters">
+                <!-- <li class="filter list-group-item "> -->
+                <label for="selCity">Do you have a family history with overweigh</label>
+                <!-- <div class="card" style="background-color:rgb(242, 241, 241);"> -->
+                <select id="selCity" name=selCity>
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
                 </select>
-              </div>
 
-              <label for="date">Do you eat high calorie food frequently</label>
-              <div class="card" style="background-color:rgb(242, 241, 241);">
-                <select id="caloric_food">
-                  <option>Yes</option>
-                  <option>No</option>
+                <label for="eat">Do you eat high calorie food frequently</label>
+                <!-- <div class="card" style="background-color:rgb(242, 241, 241);"> -->
+                <select id="eat" name=eat>
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
                 </select>
-              </div>
 
-              <label for="date">Do you eat any food between meals</label>
-              <div class="card" style="background-color:rgb(242, 241, 241);">
-                <select id="between_meals">
-                  <option>Sometimes</option>
-                  <option>Frequently</option>
-                  <option>Always</option>
-                  <option>No</option>
-                </select>
-              </div>
 
-              <label for="date">Do you smoke</label>
-              <div class="card" style="background-color:rgb(242, 241, 241);">
-                <select id="smoker">
-                  <option>Yes</option>
-                  <option>No</option>
+                <label for="meals">Do you eat any food between meals</label>
+                <!-- <div class="card" style="background-color:rgb(242, 241, 241);"> -->
+                <select id="meals" name='meals'>
+                  <option value="2">Sometimes</option>
+                  <option value="1">Frequently</option>
+                  <option value="0">Always</option>
+                  <option value="3">No</option>
                 </select>
-              </div>
 
-              <label for="date">Do you monitor the calories you eat daily</label>
-              <div class="card" style="background-color:rgb(242, 241, 241);">
-                <select id="calories_monitor">
-                  <option>Yes</option>
-                  <option>No</option>
+                <label for="smoke">Do you smoke</label>
+                <!-- <div class="card" style="background-color:rgb(242, 241, 241);"> -->
+                <select id="smoke" name='smoke'>
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
                 </select>
-              </div>
 
-              <label for="date">How often do you drink alcohol</label>
-              <div class="card" style="background-color:rgb(242, 241, 241);">
-                <select id="alcohol">
-                  <option>Sometimes</option>
-                  <option>Frequently</option>
-                  <option>Always</option>
-                  <option>No</option>
-                </select>
-              </div>
+                <!-- </li> -->
+              </ul>
+            </div>
+            <div class="form-group col-lg-4 col-md-6 p-4">
+              <ul class="list-group" id="filters">
+                <!-- <li class="filter list-group-item "> -->
 
-              <label for="date">Which transport do you usually use</label>
-              <div class="card" style="background-color:rgb(242, 241, 241);">
-                <select id="transport">
-                  <option>Public_Transportation</option>
-                  <option>Walking</option>
-                  <option>Automobile</option>
-                  <option>Motorbike</option>
-                  <option>Bike</option>
+                <label for="calories">Do you monitor the calories you eat daily</label>
+                <!-- <div class="card" style="background-color:rgb(242, 241, 241);"> -->
+                <select id="calories" name="calories">
+                  <option value="1">Yes</option>
+                  <option value="0">No</option>
                 </select>
-              </div>
-            </li>
-          </ul>
+
+                <label for="alcohol">How often do you drink alcohol</label>
+                <!-- <div class="card" style="background-color:rgb(242, 241, 241);"> -->
+                <select id="alcohol" name="alcohol">
+                  <option value="2">Sometimes</option>
+                  <option value="1">Frequently</option>
+                  <option value="0">Always</option>
+                  <option value="3">No</option>
+                </select>
+
+
+                <label for="transport">Which transport do you usually use</label>
+                <!-- <div class="card" style="background-color:rgb(242, 241, 241);"> -->
+                <select id="transport" name='transport'>
+                  <option value="3">Public_Transportation</option>
+                  <option value="4">Walking</option>
+                  <option value="0">Automobile</option>
+                  <option value="2">Motorbike</option>
+                  <option value="1">Bike</option>
+                </select>
+            </div>
+            <!-- </li> -->
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button id="filter-btn-2" type="submit" class="btn btn-primary" value="Let's find out" href="#result">Let's
+            find out</button>
         </div>
         <br>
-        <button id="filter-btn-2" type="button" class="btn btn-primary">Let's find out</button>
+        <br>
       </form>
     </div>
-    <!--The verdict-->
-    <p>{{bmi}}</p>
-    
   </section>
   <!-- Projects-->
-  <section class="dashboard-section bg-light" id="dashboard">
+  <section class="result-section bg-light" id="result">
     <div class="container px-4 px-lg-5">
 
       <!-- Featured Project Row-->
@@ -176,20 +203,30 @@
         <div class="col-xl-4 col-lg-5">
           <div class="featured-text text-lg-left">
             <h4 class="text-center">Outcome</h4>
-            <p class="text-black-50 mb-0">ABCD</p>
+            <p class="text-black-50 mb-0">{{health}}</p>
+            <p class="text-black-50 mb-0">{{detail}}</p>
             <br>
             <p class="text-black-50 mb-0" style="font-size:80%;font-style: italic;">“The first thing you lose on a diet
-              is brain mass.
-              ”</p>
+              is brain mass.”</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- dashboard = Our dashboard Section -->
+  <section class="dashboard-section text-center" id="dashboard">
+    <div onload="createViz(0);">
+      <div id="vizContainer" style="width:2120px; height:1000px;"></div>
+      <div id="controls" style="padding:20px;">
+        <button style="width:100px;" onclick="javascript:createViz(-1);">Previous</button>
+        <button style="width:100px;" onclick="javascript:createViz(1);">Next</button>
+      </div>
+    </div>
+  </section>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
-  <script src="js/app.js"></script>
+  <script src="{{ url_for('static', filename='js/app.js')}}"></script>
   <script src="{{ url_for('static',filename='js/scripts.js') }}"></script>
   <!-- <link href="{{ url_for('static',filename='js/scripts.js') }}"> -->
 
