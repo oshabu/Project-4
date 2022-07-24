@@ -2,8 +2,13 @@
 can you tell if you are over or underweight?
 
 ## About this project:
-We often think that obesity cause by overeating, however that's not only the case. Nowadays, obesity has become a significant threat for all people from every age, worldwide. Unhealthy lifestyle, eating excessive junk food, late-night sleep, spend a long time sitting down are several factors that contribute to obesity.. "so, if I'm overweight do I mean i am also Obese? what is the difference between overweight and obese?"
-Overweight is when the BMI greater than or equal to 25; and how we measure if we are obese is when the BMI (Body Mass Index) is greater than or equal to 30. If you are overweight, potentially you will become obese if precautions being ignored. 
+We often think that obesity cause by overeating, however that's not only the case. Nowadays, obesity has become a significant threat for all people from every age, worldwide. Unhealthy lifestyle, eating excessive junk food, late-night sleep, spend a long time sitting down are several factors that contribute to obesity.. Overweight and obesity refer to excess body weight, which is a risk factor for many diseases and chronic conditions and is associated with higher rates of death. It mainly occurs because of an imbalance between energy intake (from the diet) and energy expenditure (through physical activities and bodily functions) 
+
+[Australian institute of health and welfare](https://www.aihw.gov.au/reports/australias-health/overweight-and-obesity)
+
+"so, if I'm overweight do I mean i am also Obese? what is the difference between overweight and obese?"
+Overweight is when the BMI greater than or equal to 25; and how we measure if we are obese is when the BMI (Body Mass Index) is greater than or equal to 30. If you are overweight, potentially you will become obese if precautions being ignored.
+
 If the current trend continues, the overweight and obese population is likely to increase to 41% by 2030. Individuals developing signs of weight gain or obesity are also at a risk of developing serious illnesses such as type 2 diabetes, respiratory problems, heart disease and stroke. Some intervention measures such as physical activity and healthy eating can be a fundamental component to maintain a healthy lifestyle. Therefore, it is absolutely essential to detect obesity as early as possible.
 
 <div id="header" align="center">
