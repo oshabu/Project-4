@@ -1,12 +1,12 @@
 import joblib
 import numpy as np
 from flask import Flask, render_template, request
-from sklearn.linear_model import LinearRegression
+# from sklearn.linear_model import LinearRegression
 import os
 import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
+# from sklearn.ensemble import GradientBoostingClassifier
 from sklearn import preprocessing
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
+# from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
 import pickle
 
 from sklearn.preprocessing import LabelEncoder
