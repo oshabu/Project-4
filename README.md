@@ -73,6 +73,8 @@ Questionaire:
 ## **Presentation:**
 ![Microsoft PowerPoint](https://img.shields.io/badge/Microsoft_PowerPoint-B7472A?style=for-the-badge&logo=microsoft-powerpoint&logoColor=white)
 
+template from slidegogo
+
 ## **Platform:**
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
@@ -96,7 +98,10 @@ Questionaire:
 
 
 ## **Observations:**
-Obesity in general is a global concern. Many studies have previously done and publish in general for statistical methods to predict the probabilities of children growing into adults as obese. 
+Obesity in general is a global concern. Many studies have previously done and publish in general for statistical methods to predict the probabilities of children growing into adults as obese. our aim is to have early detection on the early detection of obesity by deploying the dataset we got into machine learning algorithms. using the method XGBoost, we got pretty close with accuracy of 94%.
+
+[machinelearning heroku](https://mchinelearningknows.herokuapp.com/)
+
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/3ohzdJ7FOY1sct67WU/giphy.gif" width="300"/>
 </div>
