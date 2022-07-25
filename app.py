@@ -17,8 +17,8 @@ app = Flask(__name__, static_folder="templates")
 
 filename = 'finalized_model.sav'
 le = LabelEncoder()
-#data = pd.read_csv('ObesityDataSet_raw_and_data_sinthetic.csv')#读取数据
-#data['NObeyesdad'] = le.fit_transform(data['NObeyesdad'])
+
+
 filename1 = 'min_max_scalar.sav'
 filename2 = 'label_encoder.sav'
 scaler = preprocessing.MinMaxScaler()
@@ -52,23 +52,37 @@ def home():
         bmi =''.join(str(i) for i in bmi1)
 
         if((result[0].astype(int)) ==0):
-            detail = 'Insufficient_Weight'
+            # 'Insufficient_Weight'
+            detail = 'Your BMI is less than 18.5'
+            detail2 = 'If the diet is the cause of your low weight, changing to a healthy, balanced diet that provides the right amount of calories for your age, height and how active you are can help you achieve a healthy weight.'
         if((result[0].astype(int)) ==1):
-            detail = 'Normal_Weight'
+            # 'Normal_Weight'
+            detail = 'Your BMI is between 18.5 to 24.9'
+            detail2 = 'NICE WORK! Keep your current diet and routine. Emphasize vegetables, fruits, whole grains, and fat-free or low-fat dairy products. Include lean meats, poultry, fish, beans, eggs, and nuts. Limit saturated and trans fats, sodium, and added sugars.'
         if ((result[0].astype(int)) == 2):
-            detail = 'Obesity_Type_I'
+            # 'Obesity_Type_I'
+            detail = 'Your BMI is between 30 to 34.9'
+            detail2 = 'Eat a balanced, calorie-controlled diet as recommended by your GP or weight loss management health professional (such as a dietitian). Take up activities such as fast walking, jogging, swimming or tennis for 150 to 300 minutes (two-and-a-half to five hours) a week.'
         if ((result[0].astype(int)) == 3):
-            detail = 'Obesity_Type_II'
+            # 'Obesity_Type_II'
+            detail = 'Your BMI is between 35 to 39.9'
+            detail2 = 'Eat a balanced, calorie-controlled diet as recommended by your GP or weight loss management health professional (such as a dietitian). Take up activities such as fast walking, jogging, swimming or tennis for 150 to 300 minutes (two-and-a-half to five hours) a week.'
         if ((result[0].astype(int)) == 4):
-            detail = 'Obesity_Type_III'
+            # 'Obesity_Type_III'
+            detail = 'Your BMI is more than 40'
+            detail2 = 'Eat a balanced, calorie-controlled diet as recommended by your GP or weight loss management health professional (such as a dietitian). Take up activities such as fast walking, jogging, swimming or tennis for 150 to 300 minutes (two-and-a-half to five hours) a week.'
         if ((result[0].astype(int)) == 5):
-            detail = 'Overweight_Level_I'
+            # 'Overweight_Level_I'
+            detail = 'Your BMI is between 25 to 27.4'
+            detail2 = 'Eat a balanced, calorie-controlled diet as recommended by your GP or weight loss management health professional (such as a dietitian). Take up activities such as fast walking, jogging, swimming or tennis for 150 to 300 minutes (two-and-a-half to five hours) a week.'
         if ((result[0].astype(int)) == 6):
-            detail = 'Overweight_Level_II'
+            # 'Overweight_Level_II'
+            detail = 'Your BMI is between 27.5 to 29.9	'
+            detail2 = 'Eat a balanced, calorie-controlled diet as recommended by your GP or weight loss management health professional (such as a dietitian). Take up activities such as fast walking, jogging, swimming or tennis for 150 to 300 minutes (two-and-a-half to five hours) a week.'
 
 
 
-        return render_template('home.html',  health = bmi,detail = detail)
+        return render_template('home.html',  health = bmi,detail = detail, detail2 = detail2)
 
     
     else:
