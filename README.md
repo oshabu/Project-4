@@ -95,7 +95,9 @@ template downloaded from slidegogo
 ![CHART2](image/tableau5.png)
 
 ## **Observations:**
-Obesity in general is a global concern. Many studies have previously done and publish in general for statistical methods to predict the probabilities of children growing into adults as obese. 
+Obesity in general is a global concern. Many studies have previously done and publish in general for statistical methods to predict the probabilities of obesity. we hoping by deploying this machine learning, we can build more awareness of audience and the their health. 
+
+https://mchinelearningknows.herokuapp.com/
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/3ohzdJ7FOY1sct67WU/giphy.gif" width="300"/>
 </div>
