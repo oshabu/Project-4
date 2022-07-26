@@ -46,7 +46,7 @@
   </nav>
 
   <!-- TopPage-->
-  <header class="masthead">
+  <div class="masthead">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
       <div class="d-flex justify-content-center">
         <div class="text-center">
@@ -58,7 +58,7 @@
         </div>
       </div>
     </div>
-  </header>
+  </div>
 
 
   <!-- try = Our try it Out Section-->
@@ -193,10 +193,7 @@
   </section>
   <!-- Projects-->
   <section class="result-section bg-light" id="result">
-    <!-- <div class="container px-10 px-lg-10"> -->
-
-    <!-- Featured Project Row-->
-    <div class="row align-items-center" style="margin: 50px;">
+    <div class="row align-items-center">
       <div class="col-xl-7">
         <img class="img-fluid" style="width: 100%" src="{{ url_for('static',filename='assets/img/Brain.jpg') }}"
           alt="..." />
@@ -213,22 +210,22 @@
           <p class="text-black-50 mb-0">{{detail2}}</p>
 
           <br>
-          <p class="text-black-50 mb-0" style="font-size:80%;font-style: italic;">“The first thing you lose on a diet
-            is brain mass.”</p>
+          <p class="text-black-50 mb-0" style="font-size:80%;font-style: italic;">“The first thing you lose on a diet is
+            brain mass.”</p>
         </div>
       </div>
     </div>
-    <!-- </div> -->
   </section>
 
   <!-- dashboard = Our dashboard Section -->
   <section class="dashboard-section text-center" id="dashboard">
     <div onload="createViz(0);">
-      <div id="vizContainer" style="width:2120px; height:1000px;"></div>
+      <div id="vizContainer" style="width:1900px; height:900px;"></div>
       <div id="controls" style="padding:20px;">
-        <button style="width:100px;" onclick="javascript:createViz(-1);">Previous</button>
+        <button style="width:100px;" id="firstviz" onclick="javascript:createViz(-1);">Previous</button>
         <button style="width:100px;" onclick="javascript:createViz(1);">Next</button>
       </div>
+    </div>
     </div>
   </section>
 

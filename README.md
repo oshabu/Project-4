@@ -24,14 +24,15 @@ If the current trend continues, the overweight and obese population is likely to
 5. Create Flask App and connect routes to local host
 6. Create charts and map using Tableau
 7. Customise html for final application
-8. Deploy to heroku 
+8. Visualise dashboard locally
 
 ## **Architectural Diagram:**
 ![CHART1](image/DATAPROCESSING.png)
 
 ## **Data Sources:**
 Data is derived from the Kaggle dataset in order to illustrate the relationship between questionaire surveyed approximately 2000 participant. 
-- [Estimate obesity level classification](https://www.kaggle.com/code/kaitod14/starter-estimate-obseity-level-classification/data?select=ObesityDataSet_raw_and_data_sinthetic.csv)
+- [Estimate obseity level classification](https://www.kaggle.com/code/kaitod14/starter-estimate-obseity-level-classification/data?select=ObesityDataSet_raw_and_data_sinthetic.csv)
+
 
 
 Questionaire: 
@@ -73,8 +74,6 @@ Questionaire:
 ## **Presentation:**
 ![Microsoft PowerPoint](https://img.shields.io/badge/Microsoft_PowerPoint-B7472A?style=for-the-badge&logo=microsoft-powerpoint&logoColor=white)
 
-template from slidegogo
-
 ## **Platform:**
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
@@ -83,10 +82,7 @@ template from slidegogo
 ![Anaconda](https://img.shields.io/badge/Anaconda-%2344A833.svg?style=for-the-badge&logo=anaconda&logoColor=white)
 
 ## **Limitations, Assumptions & Challenges:**
-- Unknown to which benchmark the definition of ‘overweight 1, 2, obese 1, 2, 3, normal and underweight’ use. 
-- No time stamp when survey is conducted in the dataset
-- Feature importance in this dataset is bias towards the weight of survey participant rather than other features
-- Geographical limitation in this data source (survey only conducted in certain countries: Mexico, Peru and Colombia)
+- 
 - Restricted timeframe to complete project 4
 
 ## **Visualizations & Analysis:**
@@ -95,13 +91,8 @@ template from slidegogo
 ![CHART1](image/tableau1.png)
 ![CHART2](image/tableau2.png)
 ![CHART2](image/tableau5.png)
-
-
 ## **Observations:**
-Obesity in general is a global concern. Many studies have previously done and publish in general for statistical methods to predict the probabilities of children growing into adults as obese. our aim is to have early detection on the early detection of obesity by deploying the dataset we got into machine learning algorithms. using the method XGBoost, we got pretty close with accuracy of 94%.
-
-[machinelearning heroku](https://mchinelearningknows.herokuapp.com/)
-
+Obesity in general is a global concern. Many studies have previously done and publish in general for statistical methods to predict the probabilities of children growing into adults as obese. 
 <div id="header" align="center">
   <img src="https://media.giphy.com/media/3ohzdJ7FOY1sct67WU/giphy.gif" width="300"/>
 </div>

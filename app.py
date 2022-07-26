@@ -84,9 +84,10 @@ def home():
 
         return render_template('home.html', _anchor="result",  health = bmi,detail = detail, detail2 = detail2)
 
+
     
     else:
-        return render_template('home.html',_anchor="try")
+        return render_template('home.html')
     
  
 if __name__ == '__main__':
